@@ -1,12 +1,12 @@
 const pageConfig = {
   // Title for your status page
-  title: "AM科技's Status Page",
+  title: "QuiYu 站点监控",
   // Links shown at the header of your status page, could set `highlight` to `true`
   links: [
-    { link: 'https://am.809098.xyz', label: '个人博客', highlight: true },
-    { link: 'https://youtube.com/@AM_CLUB', label: 'AM科技' },
-    { link: 'https://github.com/amclubs', label: 'GitHub' },
-    { link: 'https://809098.xyz', label: 'Blog'},
+    { link: 'https://blog.quiyu.top', label: '个人博客', highlight: true },
+    { link: 'https://im.quiyu.top', label: '图床' },
+    { link: 'https://email.quiyu.top', label: '临时邮箱' },
+    { link: 'https://sub.quiyu.top', label: '订阅提醒'},
   ],
 }
 
@@ -50,14 +50,47 @@ const workerConfig = {
     },
     // Example TCP Monitor
     {
-      id: '809098.xyz',
-      name: 'Blog',
+      id: 'blog.quiyu.top',
+      name: '博客',
       // `method` should be `TCP_PING` for tcp monitors
       method: 'GET',
       // `target` should be `host:port` for tcp monitors
-      target: 'https://809098.xyz',
-      tooltip: 'My production server monitor',
-      statusPageLink: 'https://809098.xyz',
+      target: 'https://blog.quiyu.top',
+      tooltip: '博客服务器状态',
+      statusPageLink: 'https://blog.quiyu.top',
+      timeout: 10000,
+    },
+    {
+      id: 'im.quiyu.top',
+      name: '图床',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'GET',
+      // `target` should be `host:port` for tcp monitors
+      target: 'https://im.quiyu.top',
+      tooltip: '图床服务器状态',
+      statusPageLink: 'https://im.quiyu.top',
+      timeout: 10000,
+    },
+    {
+      id: 'email.quiyu.top',
+      name: '临时邮箱',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'GET',
+      // `target` should be `host:port` for tcp monitors
+      target: 'https://email.quiyu.top',
+      tooltip: '临时邮箱服务器状态',
+      statusPageLink: 'https://email.quiyu.top',
+      timeout: 10000,
+    },
+    {
+      id: 'sub.quiyu.top',
+      name: '订阅提醒',
+      // `method` should be `TCP_PING` for tcp monitors
+      method: 'GET',
+      // `target` should be `host:port` for tcp monitors
+      target: 'https://sub.quiyu.top',
+      tooltip: '订阅提醒服务器状态',
+      statusPageLink: 'https://sub.quiyu.top',
       timeout: 10000,
     },
   ],
