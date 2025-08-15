@@ -20,17 +20,17 @@ const workerConfig = {
     // Example HTTP Monitor
     {
       // `id` should be unique, history will be kept if the `id` remains constant
-      id: 'am.809098.xyz',
+      id: 'uf.quiyu.top',
       // `name` is used at status page and callback message
-      name: '个人博客',
+      name: '监控面板状态',
       // `method` should be a valid HTTP Method
       method: 'GET',
       // `target` is a valid URL
-      target: 'https://am.809098.xyz',
+      target: 'https://uf.quiyu.top',
       // [OPTIONAL] `tooltip` is ONLY used at status page to show a tooltip
       tooltip: 'This is a tooltip for this monitor',
       // [OPTIONAL] `statusPageLink` is ONLY used for clickable link at status page
-      statusPageLink: 'https://am.809098.xyz',
+      statusPageLink: 'https://uf.quiyu.top',
       // [OPTIONAL] `expectedCodes` is an array of acceptable HTTP response codes, if not specified, default to 2xx
       // expectedCodes: [200],
       // [OPTIONAL] `timeout` in millisecond, if not specified, default to 10000
